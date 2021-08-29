@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../modelos/producto';
+import { PRODUCTOS } from '../modelos/productos-muestra';
 
 @Component({
   selector: 'app-productos',
@@ -8,15 +9,9 @@ import { Producto } from '../modelos/producto';
 })
 export class ProductosComponent implements OnInit {
 
+productos = PRODUCTOS;
 
-  producto : Producto = {
-    id: 1,
-    nombre : 'Salchichon de Cocodrilo',
-    descripcion : "100% hecho unicamente de cocodrilos que comen cocodrilos que comen cocodrilos que comen personas",
-    origen : "Egipto"
-
-
-  }
+ 
 
   constructor() { }
 

@@ -1,8 +1,6 @@
-<h2>{{producto.nombre | uppercase}}</h2>
-<div><span>id: </span>{{producto.id}}</div>
-<div><span>descripcion: </span>{{producto.descripcion}}</div>
-<div><span>origen: </span>{{producto.origen}}</div>
-<div>
-    <label for="name">Nombre del Producto: </label>
-    <input id="name" [(ngModel)]="producto.nombre" placeholder="name">
-  </div>
+<h2>Los buenos productos </h2>
+<ul class="productos">
+    <li *ngFor ="let producto of productos"> 
+        <span class="badge">{{producto.id}} </span> {{producto.nombre}}
+    </li>
+</ul>
