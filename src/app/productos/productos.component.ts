@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from '../modelos/producto';
 import { PRODUCTOS } from '../modelos/productos-muestra';
 
+import { ProductoService } from '../servicios/producto-service/producto.service';
+
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
@@ -9,7 +11,7 @@ import { PRODUCTOS } from '../modelos/productos-muestra';
 })
 export class ProductosComponent implements OnInit {
 
-productos = PRODUCTOS;
+productos :Producto[] =[];
 
 productoSeleccionado?:Producto;
  
@@ -17,9 +19,13 @@ onSelect(producto : Producto) :void {
   this.productoSeleccionado = producto;
 }
 
-  constructor() { }
+  constructor(private productoService : ProductoService) { }
 
   ngOnInit(): void {
+    this.getProductos();
   }
 
+  getProductos() : void{
+  this.productos= this.productoService.getProductos();
+  }
 }

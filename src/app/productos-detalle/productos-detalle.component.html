@@ -1,1 +1,11 @@
-<p>productos-detalle works!</p>
+<div *ngIf="producto"> 
+    <h2> {{producto.nombre | uppercase}} en detalle</h2>
+    <div><span>id: </span>{{producto.id}}</div>
+    <div><span>nombre: </span>{{producto.nombre}}</div>
+    <div><span>descripcion: </span>{{producto.descripcion}}</div>
+    <div>
+      <label for="producto-origen">Origen del producto: </label>
+      <input id="producto-origen" [(ngModel)]="producto.origen" placeholder="origen">
+    
+    </div>
+    </div>

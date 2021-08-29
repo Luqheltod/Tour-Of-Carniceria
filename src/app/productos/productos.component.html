@@ -5,14 +5,4 @@
     </li>
 </ul>
 
-<div *ngIf="productoSeleccionado"> 
-<h2> {{productoSeleccionado.nombre | uppercase}} en detalle</h2>
-<div><span>id: </span>{{productoSeleccionado.id}}</div>
-<div><span>nombre: </span>{{productoSeleccionado.nombre}}</div>
-<div><span>descripcion: </span>{{productoSeleccionado.descripcion}}</div>
-<div>
-  <label for="producto-origen">Origen del producto: </label>
-  <input id="producto-origen" [(ngModel)]="productoSeleccionado.origen" placeholder="origen">
-
-</div>
-</div>
+<app-productos-detalle [producto]="productoSeleccionado"></app-productos-detalle>
