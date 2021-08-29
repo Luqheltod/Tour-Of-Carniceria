@@ -11,7 +11,11 @@ export class ProductosComponent implements OnInit {
 
 productos = PRODUCTOS;
 
+productoSeleccionado?:Producto;
  
+onSelect(producto : Producto) :void {
+  this.productoSeleccionado = producto;
+}
 
   constructor() { }
 
