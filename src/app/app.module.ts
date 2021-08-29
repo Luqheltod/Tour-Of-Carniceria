@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductosComponent } from './productos/productos.component';
 import { ProductosDetalleComponent } from './productos-detalle/productos-detalle.component';
+import { MensajesComponent } from './mensajes/mensajes.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ProductosDetalleComponent } from './productos-detalle/productos-detalle
     AppComponent,
     ProductosComponent,
     ProductosDetalleComponent,
+    MensajesComponent,
    
   ],
   imports: [
