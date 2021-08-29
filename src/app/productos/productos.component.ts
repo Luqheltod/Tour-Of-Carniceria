@@ -26,6 +26,6 @@ onSelect(producto : Producto) :void {
   }
 
   getProductos() : void{
-  this.productos= this.productoService.getProductos();
+   this.productoService.getProductos().subscribe(productos=> this.productos = productos);
   }
 }
